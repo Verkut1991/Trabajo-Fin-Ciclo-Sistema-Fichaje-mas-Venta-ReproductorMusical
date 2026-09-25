@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://oa1scw1u3eqq"]
+
+[ext_resource type="Script" path="res://scripts/main_controller.gd" id="1_main"]
+[ext_resource type="PackedScene" uid="uid://loginview001" path="res://scenes/login_view.tscn" id="2_login"]
+[ext_resource type="PackedScene" uid="uid://fichajeview001" path="res://scenes/fichaje_view.tscn" id="3_fichaje"]
+[ext_resource type="PackedScene" uid="uid://resultadoview001" path="res://scenes/resultado_view.tscn" id="4_resultado"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_main")
+
+[node name="LoginView" parent="." instance=ExtResource("2_login")]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FichajeView" parent="." instance=ExtResource("3_fichaje")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ResultadoView" parent="." instance=ExtResource("4_resultado")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

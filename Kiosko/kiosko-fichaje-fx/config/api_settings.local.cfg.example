@@ -1,0 +1,3 @@
+[api]
+; Copia como api_settings.cfg
+base_url="http://localhost:6003/api"

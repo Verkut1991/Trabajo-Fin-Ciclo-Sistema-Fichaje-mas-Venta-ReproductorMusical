@@ -1,0 +1,81 @@
+[gd_scene load_steps=2 format=3 uid="uid://resultadoview001"]
+
+[ext_resource type="Script" path="res://scripts/views/resultado_view.gd" id="1_resultado"]
+
+[node name="ResultadoView" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_resultado")
+
+[node name="Background" type="ColorRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.058824, 0.090196, 0.164706, 1)
+
+[node name="Center" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Card" type="PanelContainer" parent="Center"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(640, 0)
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="Center/Card"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="IconLabel" type="Label" parent="Center/Card/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 56
+text = "✓"
+horizontal_alignment = 1
+
+[node name="TituloLabel" type="Label" parent="Center/Card/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "Resultado"
+horizontal_alignment = 1
+
+[node name="DetalleLabel" type="Label" parent="Center/Card/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.580392, 0.639216, 0.721569, 1)
+theme_override_font_sizes/font_size = 20
+text = "Detalle"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="TiempoPanel" type="PanelContainer" parent="Center/Card/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="TiempoLabel" type="Label" parent="Center/Card/VBox/TiempoPanel"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Tiempo trabajado hoy: --"
+horizontal_alignment = 1
+
+[node name="ContinuarButton" type="Button" parent="Center/Card/VBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(280, 58)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 20
+text = "Continuar"

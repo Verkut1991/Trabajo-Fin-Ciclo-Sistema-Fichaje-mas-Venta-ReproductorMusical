@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">FichajeFX</string>
+    <string name="status_loading">Consultando estado…</string>
+    <string name="status_working">Trabajando</string>
+    <string name="status_resting">En descanso</string>
+    <string name="status_pending">Jornada no iniciada</string>
+    <string name="status_hint_working">Estás en jornada. Ficha salida al terminar.</string>
+    <string name="status_hint_resting">Fuera de jornada. Ficha entrada para volver a trabajar.</string>
+    <string name="status_hint_pending">Aún no has fichado hoy. Pulsa entrada para empezar.</string>
+</resources>

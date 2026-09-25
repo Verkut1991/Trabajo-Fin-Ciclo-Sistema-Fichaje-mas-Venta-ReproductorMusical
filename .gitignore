@@ -1,0 +1,30 @@
+# Dependencias y builds
+node_modules/
+**/node_modules/
+**/build/
+**/dist/
+**/target/
+**/.godot/
+**/.import/
+
+# Secretos y configuración local
+.env
+.env.local
+**/.env
+**/api.properties
+!**/api.properties.example
+
+# IDE y sistema
+.idea/
+.vscode/
+.DS_Store
+*.log
+
+# Backup del .git corrupto
+.git.corrupted-backup/
+
+# dumps y secretos
+DBBackUp.sql
+.env
+.env.local
+node_modules/

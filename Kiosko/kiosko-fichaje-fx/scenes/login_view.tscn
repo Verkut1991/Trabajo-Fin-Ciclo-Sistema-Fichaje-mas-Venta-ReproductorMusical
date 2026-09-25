@@ -1,0 +1,177 @@
+[gd_scene load_steps=2 format=3 uid="uid://loginview001"]
+
+[ext_resource type="Script" path="res://scripts/views/login_view.gd" id="1_login"]
+
+[node name="LoginView" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_login")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.058824, 0.090196, 0.164706, 1)
+
+[node name="AccentGlow" type="ColorRect" parent="."]
+modulate = Color(0.388235, 0.4, 0.945098, 0.12)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -280.0
+offset_right = 320.0
+offset_bottom = 120.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Center" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Card" type="PanelContainer" parent="Center"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(560, 0)
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="Center/Card"]
+layout_mode = 2
+theme_override_constants/separation = 18
+
+[node name="BrandSmall" type="Label" parent="Center/Card/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.505882, 0.54902, 0.972549, 1)
+theme_override_font_sizes/font_size = 18
+text = "Kompot Player Fichaje"
+horizontal_alignment = 1
+
+[node name="Title" type="Label" parent="Center/Card/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Fichaje"
+horizontal_alignment = 1
+
+[node name="Subtitle" type="Label" parent="Center/Card/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.580392, 0.639216, 0.721569, 1)
+theme_override_font_sizes/font_size = 16
+text = "Configuración inicial del kiosko"
+horizontal_alignment = 1
+
+[node name="EmpresaLabel" type="Label" parent="Center/Card/VBox"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0.505882, 0.54902, 0.972549, 1)
+theme_override_font_sizes/font_size = 15
+horizontal_alignment = 1
+
+[node name="Spacer" type="Control" parent="Center/Card/VBox"]
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+
+[node name="SetupStack" type="VBoxContainer" parent="Center/Card/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="EmailInput" type="LineEdit" parent="Center/Card/VBox/SetupStack"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 52)
+layout_mode = 2
+placeholder_text = "Email administrador de la empresa"
+
+[node name="PasswordInput" type="LineEdit" parent="Center/Card/VBox/SetupStack"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 52)
+layout_mode = 2
+placeholder_text = "Contraseña administrador"
+secret = true
+
+[node name="SetupButton" type="Button" parent="Center/Card/VBox/SetupStack"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 58)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Vincular kiosko"
+
+[node name="PinStack" type="VBoxContainer" parent="Center/Card/VBox"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="PinInput" type="LineEdit" parent="Center/Card/VBox/PinStack"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+placeholder_text = "PIN (4 caracteres)"
+max_length = 4
+secret = true
+alignment = 1
+
+[node name="PinButton" type="Button" parent="Center/Card/VBox/PinStack"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 58)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Identificarme"
+
+[node name="ResetSetupButton" type="Button" parent="Center/Card/VBox/PinStack"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+text = "Reconfigurar kiosko"
+flat = true
+
+[node name="StatusLabel" type="Label" parent="Center/Card/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.972549, 0.443137, 0.443137, 1)
+theme_override_font_sizes/font_size = 15
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="LoadingPanel" type="Panel" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LoadingLabel" type="Label" parent="LoadingPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -16.0
+offset_right = 120.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.972549, 0.980392, 0.988235, 1)
+theme_override_font_sizes/font_size = 22
+text = "Conectando..."
+horizontal_alignment = 1

@@ -1,0 +1,4 @@
+api.protocol=http
+api.host=localhost
+api.port=6003
+api.path=/api

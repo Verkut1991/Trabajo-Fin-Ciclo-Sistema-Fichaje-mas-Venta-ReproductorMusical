@@ -1,0 +1,23 @@
+{
+  "name": "servidor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node scripts/test-jwt-pin.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.5.2",
+    "http": "^0.0.1-security",
+    "jsonwebtoken": "^9.0.3",
+    "mongodb": "^7.0.0",
+    "mysql": "^2.18.1",
+    "route": "^0.2.5"
+  }
+}

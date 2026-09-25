@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_fichaje">
+
+    <fragment
+        android:id="@+id/nav_fichaje"
+        android:name="com.example.fichajefx.ui.FichajeFragment"
+        android:label="Registrar Fichaje"
+        app:layout="@layout/fragment_fichaje" />
+
+    <fragment
+        android:id="@+id/nav_perfil"
+        android:name="com.example.fichajefx.ui.PerfilFragment"
+        android:label="Mi Perfil"
+        app:layout="@layout/fragment_perfil" />
+
+</navigation>
